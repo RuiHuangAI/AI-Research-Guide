@@ -1,10 +1,10 @@
 <p align="center"><img src="public/blog/guide/logo-mark.png" width="190" alt="UESTC AI 社"></p>
 
 <h1 align="center">AI 科研入门指南</h1>
-<p align="center">大学选择、第一项研究与一路上的经验</p>
+<p align="center">AI 入门项目、基础课程与科研实践</p>
 <p align="center"><b>中文</b> · <a href="README_EN.md">English</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/">在线阅读</a> · <a href="https://wiki.uestcai.top/zh/">社团平台版</a> · <a href="https://takamatsu-hikaru.github.io/blog/guide/zh/index.html">个人主页版</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html">讨论区</a></p>
 
-这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对大学选择与科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。
+这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。
 
 [![AI 科研入门指南架构图](public/blog/guide/figures/uestc/home/guide-overview.webp)](https://wiki.uestcai.top/zh/)
 
@@ -12,7 +12,6 @@
 
 | 你现在想了解什么 | 入口 |
 | --- | --- |
-| 大学有哪些选择，自己想往哪里走 | [写给刚进大学的你](content/guide/zh/welcome.md) |
 | 为什么做科研，如何开始、找方向、联系老师 | [科研入门Q&A](content/guide/zh/research.md) |
 | 先做一个能看到结果的小项目 | [第一个 AI 项目](content/guide/zh/start.md) |
 
@@ -24,8 +23,7 @@
 | --- | --- |
 | 基础与学习 | [学习基础知识](content/guide/zh/basics.md) · [论文选读](content/guide/zh/papers.md) |
 | 认识研究方向 | [AI 的不同方向，都在研究什么？](content/guide/zh/directions.md) · [大语言模型：理解、生成、推理](content/guide/zh/llm.md) · [Agent](content/guide/zh/agent.md) · [计算机视觉：让模型读懂图像](content/guide/zh/vision.md) · [多模态：图像、语言与声音](content/guide/zh/multimodal.md) · [生成模型](content/guide/zh/generation.md) · [强化学习](content/guide/zh/rl.md) · [世界模型](content/guide/zh/world-model.md) · [具身智能：从看见到行动](content/guide/zh/embodied.md) · [效率与系统](content/guide/zh/systems.md) · [AI 交叉学科](content/guide/zh/ai4x.md) |
-| 推进一项研究 | [找资料和读论文](content/guide/zh/reading.md) · [写作、画图和汇报](content/guide/zh/writing.md) · [联系老师、学长与合作](content/guide/zh/contact.md) · [AI 工具](content/guide/zh/ai.md) |
-| 经历与生活 | [经历、焚诀与走过的弯路](content/guide/zh/experience.md) · [论文阅读与笔记工作流](content/guide/zh/irene-workflow.md) · [大一年终总结：顿觉天地宽](content/guide/zh/timeline.md) · [怎么好好生活](content/guide/zh/life.md) |
+| 推进一项研究 | [找资料和读论文](content/guide/zh/reading.md) · [论文阅读与笔记工作流](content/guide/zh/irene-workflow.md) · [写作、画图和汇报](content/guide/zh/writing.md) · [联系老师、学长与合作](content/guide/zh/contact.md) · [AI 工具](content/guide/zh/ai.md) |
 | 看看外面 | [Lookout：研究者和实验室最近在做什么？](content/guide/zh/lookout.md) · [技术博客与研究观点](content/guide/zh/blogs.md) · [LessWrong：研究判断与 AI 使用](content/guide/zh/lesswrong.md) · [深度学习课程与论文精读](content/guide/zh/limu.md) · [课题组与研究团队](content/guide/zh/labs.md) |
 | 找具体资料 | [资料总索引](content/guide/zh/resources.md) · [科研经验与交流](content/guide/zh/research-conversations.md) |
 
@@ -57,6 +55,10 @@
 
 中文正文在 [content/guide/zh](content/guide/zh)，英文正文在 [content/guide/en](content/guide/en)。方向介绍和论文卡片的数据在 [content/guide/fieldnotes](content/guide/fieldnotes)。
 
+## 个人主页版
+
+[个人主页版](https://takamatsu-hikaru.github.io/blog/guide/zh/index.html)保留了[写给刚进大学的你](content/guide/zh/welcome.md)、[怎么好好生活](content/guide/zh/life.md)、[个人经历](content/guide/zh/experience.md)和[大一年终总结](content/guide/zh/timeline.md)，以及 LessWrong 中关于成长与工作生活平衡的文章。
+
 ## 关于与致谢
 
 [关于 AI 社与这份指南](content/guide/zh/about.md)。大学开篇、科研问答和个人经历由社团成员撰写，课程、论文和博客链接到原作者页面。
@@ -82,4 +84,4 @@ npm test               # 两套版式的回归检查
 
 打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`；第二套版式在 `public/blog/guide/guide-uestc/zh/index.html`。
 
-GitHub Pages 版发布到 [AI-Research-Guide](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/)，社团版发布到 [wiki.uestcai.top](https://wiki.uestcai.top/zh/)，个人主页版位于 [blog/guide](https://takamatsu-hikaru.github.io/blog/guide/zh/)。三个入口共用正文、方向小卡与图文排版；个人版另保留大学开篇、个人经历和 LessWrong 的成长与生活文章。
+GitHub Pages 版发布到 [AI-Research-Guide](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/)，社团版发布到 [wiki.uestcai.top](https://wiki.uestcai.top/zh/)，个人主页版位于 [blog/guide](https://takamatsu-hikaru.github.io/blog/guide/zh/)。三个入口共用科研正文、方向小卡与配图；个人主页版沿用个人网站的外观。

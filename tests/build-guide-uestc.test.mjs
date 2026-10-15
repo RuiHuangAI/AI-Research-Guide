@@ -369,3 +369,24 @@ test('dark mode is unreachable from the uestc edition', () => {
     assert.doesNotMatch(html, /dataset\.theme\s*=/, `${lang}: shell still bootstraps a theme`);
   }
 });
+
+
+test('personal shell keeps shared interactions, language links, and homepage theme', () => {
+ for (const lang of LANGS) {
+  for (const file of pagesOf(guide, lang).filter(f => !['experiments.html','publishing.html'].includes(f))) {
+   const html=fs.readFileSync(path.join(guide,lang,file),'utf8');
+   for (const id of ['theme','nav','menu','shade','language','opensearch','mobile-search','searchdialog','searchinput','closesearch','results'])
+    assert.ok(html.includes(`id="${id}"`), `${lang}/${file}: missing ${id}`);
+   assert.match(html, /class="site-header"/);
+   assert.match(html, /guide-personal.css/);
+   assert.doesNotMatch(html, /guide-uestc.css|class="app-topbar"/);
+   assert.match(html, /localStorage.getItem\('theme'\)/);
+   assert.doesNotMatch(html, /id="theme"[^>]*hidden/);
+   assert.ok(html.includes(`../${lang==='en'?'zh':'en'}/${file}`));
+  }
+  const basics=fs.readFileSync(path.join(guide,lang,'basics.html'),'utf8');
+  assert.match(basics, /guide-intro.css/);
+  const ai4x=fs.readFileSync(path.join(guide,lang,'ai4x.html'),'utf8');
+  assert.doesNotMatch(ai4x, /class="exercise"|Try it yourself/);
+ }
+});
