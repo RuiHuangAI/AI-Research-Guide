@@ -390,3 +390,22 @@ test('personal shell keeps shared interactions, language links, and homepage the
   assert.doesNotMatch(ai4x, /class="exercise"|Try it yourself/);
  }
 });
+
+test('RSI additions reach both editions and languages with working figure and paper links', () => {
+ const ids=['rsi-survey','dgm','dream-rsi','aide2','ai4ai-bench'];
+ const data=JSON.parse(fs.readFileSync(path.join(root,'content/guide/fieldnotes/ai4x.json'),'utf8'));
+ const figures=JSON.parse(fs.readFileSync(path.join(root,'content/guide/paper-figures.json'),'utf8'));
+ for (const dir of [guide,uestc]) for (const lang of LANGS) {
+  const html=fs.readFileSync(path.join(dir,lang,'ai4x.html'),'utf8');
+  const rsi=html.slice(html.indexOf('data-topic="rsi"'));
+  for (const id of ids) {
+   const paper=data.papers.find(p=>p.id===id);
+   assert.equal((rsi.match(new RegExp(`data-paper="${id}"`,'g'))||[]).length,1,`${dir}/${lang}: ${id} card`);
+   assert.ok(rsi.includes(`id="paper-${id}"`));
+   assert.ok(rsi.includes(figures[id].file));
+   for (const url of [paper.url,paper.code].filter(Boolean)) assert.ok(rsi.includes(`href="${url}"`),`${id}: lost ${url}`);
+  }
+  assert.match(rsi,/deepmind.google\/blog\/alphaevolve/);
+  assert.doesNotMatch(html,/class="exercise"|Try it yourself/);
+ }
+});
